@@ -1,0 +1,3 @@
+Adafruit CircuitPython 9.2.1 on 2024-11-20; M5Stack Cardputer with ESP32S3
+Board ID:m5stack_cardputer
+UID:4F21AFC6E3CC
