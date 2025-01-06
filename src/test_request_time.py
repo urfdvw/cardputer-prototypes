@@ -5,9 +5,9 @@ import wifi
 # installed module
 import adafruit_requests
 # custom module
-from secrets import secrets
+import secrets
 
-wifi.radio.connect(secrets["ssid"], secrets["password"])
+wifi.radio.connect(secrets.wifi["ssid"], secrets.wifi["password"])
 pool = socketpool.SocketPool(wifi.radio)
 requests = adafruit_requests.Session(pool, ssl.create_default_context())
 

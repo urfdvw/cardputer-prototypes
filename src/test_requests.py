@@ -6,7 +6,7 @@ import wifi
 
 import adafruit_requests
 
-from secrets import secrets
+import secrets
 
 #%% connect to wifi
 print("Available WiFi networks:")
@@ -15,9 +15,9 @@ for network in wifi.radio.start_scanning_networks():
             network.rssi, network.channel))
 wifi.radio.stop_scanning_networks()
 
-print("Connecting to %s"%secrets["ssid"])
-wifi.radio.connect(secrets["ssid"], secrets["password"])
-print("Connected to %s!"%secrets["ssid"])
+print("Connecting to %s"%secrets.wifi["ssid"])
+wifi.radio.connect(secrets.wifi["ssid"], secrets.wifi["password"])
+print("Connected to %s!"%secrets.wifi["ssid"])
 
 #%% status
 print("My MAC addr:", [hex(i) for i in wifi.radio.mac_address])
